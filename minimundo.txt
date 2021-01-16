@@ -1,8 +1,7 @@
 Minimundo
 
-Meu projeto representa o banco de dados de um jogo de rpg, nesse jogo é imaginado que os jogadores podem 
-interagir, fazer missões, obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não
-alinhamento.
+Representando o banco de dados de um jogo de rpg, nesse jogo é determinado que os jogadores podem interagir,
+fazer missões, obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não alinhamento.
 
 Jogador: o jogador pode escolher entre três raças Humano, Elfo e Orc, orcs podem conjurar feitiços passivos
 de combate e possuem resistencia a ataques físicos e/ou mágicos, elfos possuem uma habilidade de combate
