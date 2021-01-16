@@ -37,12 +37,13 @@ Esse projeto engloba a modelagem de um banco de dados desde a idealização de c
 pelos modelos conceitual, lógico até chegar ao físico.
 
 <a name="Minimundo"></a>
-* ### Minimundo
-  :construction: Em construção :construction:
+* ### Minimundo (Fragmento)
+  Representando o banco de dados de um jogo de rpg, nesse jogo é determinado que os jogadores podem interagir, fazer missões,
+  obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não alinhamento.
 
 <a name="ModeloER"></a>
 * ### Modelo Entidade-Relacionamento
-  :construction: Em construção :construction:
+  <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/conceitual.JPG" height="1080">
 
 <a name="ModeloLogico"></a>
 * ### Modelo Modelo Lógico
