@@ -1,0 +1,27 @@
+Descrição breve do minimundo
+
+Meu projeto representa o banco de dados de um jogo de rpg, nele os jogadores podem ser um personagem entre
+uma das três raças Humano, Elfo e Orc. cada raça possui suas classes próprias como por exemplo humano, pode
+escolher entre guerreiro, bruxo, caçador e ladrão. algumas raças possuem caracteristicas próprias como por
+exemplo elfos possuem disponível independente da classe o feitiço furtividade.
+
+Guildas são organizações formadas por um ou vários jogadores que praticam determinada atividade, todas as 
+guildas são chefiadas por um jogador e um jogador só pode fazer parte de uma guilda. uma guilda pode ser criada
+ou pode surgir a partir da especialização de uma outra guilda e assim deve seguir as regras dessa guilda como
+por exemplo a guilda dos ferreiros surgiu como especialização da guilda dos artesãos, sendo assim possúi 
+regras próprias mas herda as regras da guilda dos artesãos. uma guilda pode ter sedes espalhadas em vários
+territorios e deve estar presente em no mínimo um territorio.
+
+um territorio pertence a uma aliança e possui um único alinhamento, uma guilda presente em um territorio 
+deve obrigatoriamente seguir as regras a aliança que atua no mesmo.
+
+um jogador pode possuir um ou vários inventários, inventários são locais específicos para o armazenamento
+de recursos e ouro (moeda de troca do jogo), diferentes inventários possuem diferentes quantidades de slots
+disponíveis.
+
+recursos são conseguidos através de conquistas, troca ou manufatura.
+
+conquistas são obtidas por um ou vários jogadores que realizam uma ou várias missões, todas as missões 
+possuem um nível mínimo exigido aos jogadores que a buscam completar, uma conquista pode conter uma recompensa 
+que podem dar aos jogadores que a obtem experiencia, ouro ou recursos.
+
