@@ -47,7 +47,7 @@ pelos modelos conceitual, lógico até chegar ao físico.
 
 <a name="ModeloLogico"></a>
 * ### Modelo Modelo Lógico
-  :construction: Em construção :construction:
+  <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/logico.jpg">
   
 <a name="ModeloFisico"></a>
 * ### Modelo Modelo Físico
