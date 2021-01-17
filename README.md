@@ -39,18 +39,18 @@ pelos modelos conceitual, lógico até chegar ao físico.
 <a name="Minimundo"></a>
 * ### Minimundo (Fragmento)
   Representando o banco de dados de um jogo de rpg, nesse jogo é determinado que os jogadores podem interagir, fazer missões,
-  obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não alinhamento.
+  obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não alinhamento...
 
 <a name="ModeloER"></a>
 * ### Modelo Entidade-Relacionamento
   <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/conceitual.JPG" height="1080">
 
 <a name="ModeloLogico"></a>
-* ### Modelo Modelo Lógico
+* ### Modelo Lógico
   <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/logico.jpg">
   
 <a name="ModeloFisico"></a>
-* ### Modelo Modelo Físico
+* ### Modelo Físico
   :construction: Em construção :construction:
   
 <a name="Ferramentas"></a>
