@@ -11,6 +11,7 @@
         <li><a href="#Minimundo">Minimundo</a></li>
         <li><a href="#ModeloER">Modelo Entidade Relacionamento</a></li>
         <li><a href="#ModeloLogico">Modelo Lógico</a></li>
+        <li><a href="#DicionarioDados">Dicionário de Dados</a></li>
         <li><a href="#ModeloFisico">Modelo Físico</a></li>
         <li><a href="#Ferramentas">Ferramentas Utilizadas</a></li>
       </ul>
@@ -48,6 +49,10 @@ pelos modelos conceitual, lógico até chegar ao físico.
 <a name="ModeloLogico"></a>
 * ### Modelo Lógico
   <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/logico.jpg">
+     
+<a name="DicionarioDados"></a>
+* ### Dicionário de Dados (Fragmento)
+  <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/dicionario.JPG">
   
 <a name="ModeloFisico"></a>
 * ### Modelo Físico
