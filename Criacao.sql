@@ -26,7 +26,7 @@ CREATE TABLE Missao (
     idmissao     INT PRIMARY KEY,
     nome         VARCHAR(45) NOT NULL,
     nivel_minimo SMALLINT    NOT NULL,
-    idrecompesa  INT REFERENCES Recompensa(idrecompensa)
+    idrecompensa  INT REFERENCES Recompensa(idrecompensa)
 );
 
 CREATE TABLE Jogador (
@@ -94,7 +94,7 @@ CREATE TABLE Conquista (
     idjogador    BIGINT NOT NULL REFERENCES Jogador(idjogador),
     idmissao     INT    NOT NULL REFERENCES Missao(idmissao),
     idrecompensa INT    REFERENCES Recompensa(idrecompensa),
-    nome         INT    NOT NULL,
+    nome         VARCHAR(100)    NOT NULL,
     PRIMARY KEY (idjogador, idmissao)
 );
 
@@ -112,6 +112,6 @@ CREATE TABLE Habita (
     idterritorio        INT NOT NULL REFERENCES Territorio(idterritorio),
     idalinhamento       INT NOT NULL REFERENCES Alinhamento(idalinhamento),
     idguilda            INT NOT NULL REFERENCES Guilda(idguilda),
-    beneficio_menbros   VARCHAR(45) NOT NULL,
+    beneficio_menbros   VARCHAR(145) NOT NULL,
     PRIMARY KEY (idterritorio, idalinhamento, idguilda)
 )
