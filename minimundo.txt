@@ -1,28 +1,19 @@
 Minimundo
 
-Representando o banco de dados de um jogo de rpg, nesse jogo é determinado que os jogadores podem interagir,
-fazer missões, obter conquistas, chefiar e fazer parte de uma guilda que pode possuir ou não alinhamento.
+Representando o banco de dados de um jogo de rpg, neste jogo é determinado que os jogadores podem interagir,
+fazer missões, obter conquistas, chefiar é fazer parte de uma guilda.
 
 Jogador: o jogador pode escolher entre três raças Humano, Elfo e Orc, orcs podem conjurar feitiços passivos
-de combate e possuem resistencia a ataques físicos e/ou mágicos, elfos possuem uma habilidade de combate
-podendo ser acrobacia ou furtividade, humanos podem possuir uma ou várias profissões dependendo da profissão
-recursos adicionais podem ser conseguidos de missões por padrão humanos possuem a profissão de caçador.
+de combate e possuem resistência a ataques físicos e/ou mágicos, elfos possuem uma habilidade de combate
+podendo ser acrobacia ou furtividade, humanos possuem habilidades próprias podem possuir uma ou várias 
+profissões dependendo da profissão recursos adicionais podem ser conseguidos de missões.
 
-Alinhamento: no jogo são definidos 3 tipos de alinhamento, Neutro, Luz e Trevas. um jogador de qualquer
-alinhamento podem sem nenhum risco acessar territorios neutros, territorios de alinhamento luz podem ser
-acessados sem nenhum risco por jogadores neutros e de alinhamento luz, territorios de alinhamento trevas
-podem ser acessados sem nenhum risco apenas por jogadores de alinhamento trevas. jogadores de alinhamento
-neutro ou luz podem ser atacados por outros jogadores ao acessar territorio de alinhamento trevas.
+Guilda: são organizações formadas por um ou vários jogadores todas as guildas são chefiadas por um jogador e
+um jogador só pode fazer parte de uma guilda seja chefiando ou como membro, uma guilda pode ser criada ou pode
+surgir a partir de uma outra guilda e assim deve seguir as regras dessa guilda. uma guilda pode ter sedes 
+espalhadas em vários territórios e deve estar presente em no mínimo um território.
 
-Guilda: são organizações formadas por um ou vários jogadores que praticam determinada atividade todas as 
-guildas são chefiadas por um jogador e um jogador só pode fazer parte de uma guilda seja chefiando ou como
-menbro por possuirem alinhamento jogadores de outros alinhamentos não podem se unir a uma guilda de alinhamento
-diferente do seu. uma guilda pode ser criada ou pode surgir a partir da especialização de uma outra guilda e 
-assim deve seguir as regras dessa guilda como por exemplo a guilda dos ferreiros surgiu como especialização 
-da guilda dos artesãos. uma guilda pode ter sedes espalhadas em vários territorios e deve estar presente 
-em no mínimo um territorio.
-
-Territorio: uma área demarcada que é habitada por uma ou várias guildas, um território pode ser habitado
+Território: uma área demarcada que é habitada por uma ou várias guildas, um território pode ser habitado
 guildas de diferentes alinhamentos.
 
 Inventário: um jogador pode possuir um ou vários inventários, inventários são locais específicos para o 
@@ -30,17 +21,17 @@ armazenamento de recursos e ouro (moeda de troca do jogo), diferentes inventári
 de slots disponíveis.
 
 Recursos: são conseguidos através de conquistas, missões, ou troca. recursos possuem valor e ocupam diferentes
-quantidades de slots de um inventário, ha diferentes tipos de recursos equipaveis, consumíveis e neutros. 
-recursos equipaveis podem ser equipados pelo jogador e proporcionam nenhum ou vários atributos, recursos
-consumíveis podem ser consumidos pelo jogador e possuem um ou mais efeitos temporarios e por fim recursos 
-neutros podem ser usados para fabricar recursos equipaveis, consumíveis ou outro recurso neutro.
+quantidades de slots de um inventário, há diferentes tipos de recursos equipáveis, consumíveis e neutros. 
+recursos equipáveis podem ser equipados pelo jogador e proporcionam nenhum ou vários atributos, recursos
+consumíveis podem ser consumidos pelo jogador e possuem um ou mais efeitos temporários e por fim recursos 
+Os neutros podem ser usados para fabricar recursos equipáveis, consumíveis ou outro recurso neutro.
 
-Missão: 
+Missão: missões podem ser iniciadas pelos jogadores através de diálogos com personagens não jogáveis, podem ter 
+recompensas dependendo da missão, toda a missão possui um nível mínimo exigido aos jogadores que buscam iniciar 
+essa missão
 
-Conquista: Obtidas por um ou vários jogadores que realizam uma ou várias missões, todas as missões possuem 
-um nível mínimo exigido aos jogadores que a buscam inicialas, missões podem conceder recompensas, uma conquista
-sempre contem uma recompensa.
+Conquista: Obtidas por um ou vários jogadores que realizam uma ou várias missões, uma conquista sempre contém 
+uma recompensa.
 
-Recompensas: dão aos jogadores que as obtem experiencia e/ou ouro e/ou recursos. podem ser obtidas através de 
+Recompensas: dão aos jogadores que as obtém experiência, ouro e recursos. podem ser obtidas através de 
 missões ou conquistas.
-
