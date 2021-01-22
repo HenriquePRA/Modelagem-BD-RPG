@@ -1,19 +1,27 @@
 CREATE DATABASE RPG;
 USE RPG;
 
-CREATE TABLE Recurso (
-    idrecurso         INT PRIMARY KEY,
-    nome              VARCHAR(45) NOT NULL,
-    valor             INT         NOT NULL,
-    tipo              VARCHAR(45) NOT NULL,
-    slots_necessarios TINYINT     NOT NULL
+CREATE TABLE Recompensa (
+    idrecompensa    INT PRIMARY KEY,
+    experiencia     INT,
+    ouro            INT
+);
+
+CREATE TABLE Missao (
+    idmissao        INT PRIMARY KEY,
+    nome            VARCHAR(120) NOT NULL,
+    descricao       MEDIUMTEXT NOT NULL,
+    nivel_minimo    SMALLINT     NOT NULL,
+    idrecompensa    INT REFERENCES Recompensa(idrecompensa)
 );
 
 
-CREATE TABLE Recompensa (
-    idrecompensa INT PRIMARY KEY,
-    experiencia  INT,
-    ouro         INT
+CREATE TABLE Recurso (
+    idrecurso           INT PRIMARY KEY,
+    nome                VARCHAR(45) NOT NULL,
+    valor               INT         NOT NULL,
+    tipo                VARCHAR(45) NOT NULL,
+    slots_necessarios   TINYINT     NOT NULL
 );
 
 CREATE TABLE recompensa_recurso (
@@ -22,16 +30,20 @@ CREATE TABLE recompensa_recurso (
     PRIMARY KEY (recompensa, recurso)
 );
 
-CREATE TABLE Missao (
-    idmissao     INT PRIMARY KEY,
-    nome         VARCHAR(45) NOT NULL,
-    nivel_minimo SMALLINT    NOT NULL,
-    idrecompensa  INT REFERENCES Recompensa(idrecompensa)
+CREATE TABLE Territorio(
+    idterritorio INT PRIMARY KEY,
+    nome         VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE Profissao (
+    idprofissao INT PRIMARY KEY,
+    nome        VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE Jogador (
     idjogador       BIGINT PRIMARY KEY,
     idguilda        INT REFERENCES Guilda(idguilda),
+    alinhamento     VARCHAR(45),
     nome            VARCHAR(45) NOT NULL,
     nivel           SMALLINT    NOT NULL,
     experiencia     BIGINT      NOT NULL,
@@ -42,12 +54,28 @@ CREATE TABLE Jogador (
     inteligencia    INT         NOT NULL
 );
 
-CREATE TABLE Guilda (
-    idguilda        INT PRIMARY KEY,
-    guilda_superior INT REFERENCES Guilda(idguilda),
-    jogador_chefe   BIGINT      NOT NULL REFERENCES Jogador(idjogador),
-    nome            VARCHAR(45) NOT NULL,
-    nivel           INT         NOT NULL
+CREATE TABLE jogador_missao (
+    missao      INT NOT NULL REFERENCES Missao(idmissao),
+    jogador     BIGINT NOT NULL REFERENCES Jogador(idjogador),
+    PRIMARY KEY (missao, jogador)
+);
+
+CREATE TABLE Conquista (
+    idconquista     INT PRIMARY KEY,
+    nome            VARCHAR(120) NOT NULL,
+    descricao       MEDIUMTEXT NOT NULL
+);
+
+CREATE TABLE jogador_conquista (
+    jogador     BIGINT NOT NULL REFERENCES Jogador(idjogador),
+    conquista   INT NOT NULL REFERENCES Conquista(idconquista),
+    PRIMARY KEY (jogador, conquista)
+);
+
+CREATE TABLE conquista_missao (
+    missao      INT NOT NULL REFERENCES Missao(idmissao),
+    conquista   INT NOT NULL REFERENCES Conquista(idconquista),
+    PRIMARY KEY (missao, conquista)
 );
 
 CREATE TABLE Inventario (
@@ -56,7 +84,6 @@ CREATE TABLE Inventario (
     slots           INT     NOT NULL,
     ouro            BIGINT  NOT NULL,
     PRIMARY KEY (idinventario, idjogador)
-
 );
 
 CREATE TABLE inventario_recurso (
@@ -66,52 +93,49 @@ CREATE TABLE inventario_recurso (
     PRIMARY KEY (idinventario, idjogador, idrecurso)
 );
 
-CREATE TABLE Profissao (
-    idprofissao INT PRIMARY KEY,
-    nome        VARCHAR(45) NOT NULL
-);
-
-CREATE TABLE Humano (
-    idjogador BIGINT NOT NULL REFERENCES Jogador(idjogador),
-    idprofissao INT  NOT NULL REFERENCES Profissao(idprofissao),
-    PRIMARY KEY (idjogador, idprofissao)
+CREATE TABLE Ogro (
+    idjogador       BIGINT      NOT NULL REFERENCES Jogador(idjogador),
+    habilidade_O    VARCHAR(45) NOT NULL,
+    resiliencia     VARCHAR(45) NOT NULL,
+    PRIMARY KEY (idjogador)
 );
 
 CREATE TABLE Elfo (
-    idjogador  BIGINT      NOT NULL REFERENCES Jogador(idjogador),
-    habilidade VARCHAR(45) NOT NULL,
+    idjogador       BIGINT      NOT NULL REFERENCES Jogador(idjogador),
+    habilidade_E    VARCHAR(45) NOT NULL,
     PRIMARY KEY (idjogador)
 );
 
-CREATE TABLE Ork (
-    idjogador   BIGINT      NOT NULL REFERENCES Jogador(idjogador),
-    passiva     VARCHAR(45) NOT NULL,
-    resistencia VARCHAR(45) NOT NULL,
+CREATE TABLE Humano (
+    idjogador       BIGINT NOT NULL REFERENCES Jogador(idjogador),
+    habilidade_H    VARCHAR(45) NOT NULL,
     PRIMARY KEY (idjogador)
 );
 
-CREATE TABLE Conquista (
-    idjogador    BIGINT NOT NULL REFERENCES Jogador(idjogador),
-    idmissao     INT    NOT NULL REFERENCES Missao(idmissao),
-    idrecompensa INT    REFERENCES Recompensa(idrecompensa),
-    nome         VARCHAR(100)    NOT NULL,
-    PRIMARY KEY (idjogador, idmissao)
+CREATE TABLE humano_profissao (
+    profissao   INT NOT NULL REFERENCES Profissao(idprofissao),
+    humano      BIGINT NOT NULL REFERENCES Humano(idjogador),
+    PRIMARY KEY (profissao, humano) 
 );
 
-CREATE TABLE Alinhamento(
-    idalinhamento INT PRIMARY KEY,
-    nome          VARCHAR(45) NOT NULL
+CREATE TABLE Guilda (
+    idguilda        INT PRIMARY KEY,
+    guilda_superior INT REFERENCES Guilda(idguilda),
+    jogador_chefe   BIGINT      NOT NULL REFERENCES Jogador(idjogador),
+    nome            VARCHAR(45) NOT NULL,
+    nivel           INT         NOT NULL
 );
 
-CREATE TABLE Territorio(
-    idterritorio INT PRIMARY KEY,
-    nome         VARCHAR(45) NOT NULL
+CREATE TABLE guilda_regra (
+    idregra     INT NOT NULL,
+    idguilda    INT NOT NULL REFERENCES Guilda(idguilda),
+    regra       MEDIUMTEXT NOT NULL,
+    PRIMARY KEY (idregra, idguilda)
 );
 
 CREATE TABLE Habita (
     idterritorio        INT NOT NULL REFERENCES Territorio(idterritorio),
-    idalinhamento       INT NOT NULL REFERENCES Alinhamento(idalinhamento),
     idguilda            INT NOT NULL REFERENCES Guilda(idguilda),
-    beneficio_menbros   VARCHAR(145) NOT NULL,
-    PRIMARY KEY (idterritorio, idalinhamento, idguilda)
-)
+    beneficio_menbros   VARCHAR(120) NOT NULL,
+    PRIMARY KEY (idterritorio, idguilda)
+);
