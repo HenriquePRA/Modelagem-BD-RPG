@@ -14,7 +14,6 @@ INSERT INTO Recompensa (idrecompensa, experiencia, ouro) VALUES
 (11, 0, 100),
 (12, 0, 1000),
 (13, 0, 1500),
-(14, 0, 2500),
 (14, 0, 5000),
 (15, 0, 10000),
 (16, 0, 15000),
@@ -139,7 +138,7 @@ INSERT INTO Territorio (idterritorio, nome) VALUES
 (13, "Pantano de Benavo"),
 (14, "Porto de Catama"),
 (15, "Cidade Vermelha"),
-(16, "Ilha do Sol")
+(16, "Ilha do Sol");
 
 INSERT INTO Profissao (idprofissao, nome) VALUES 
 (1, "Ferreiro"),
@@ -160,7 +159,7 @@ INSERT INTO Jogador(idjogador, idguilda, alinhamento, nome, nivel, experiencia, 
 (9, 2, "TREVAS", "lord", 40, 0, 1350, 50, 150, 0, 0),
 (10, 2, "TREVAS", "toklia", 35, 100, 1100, 0, 0, 10, 35),
 (11, 2, "TREVAS", "carlito", 25, 1500, 230, 0, 15, 15, 5),
-(12, NULL, "maver1k", 0, 125, 50, 0, 0, 0, 0),
+(12, NULL, "NEUTRO", "maver1k", 0, 125, 50, 0, 0, 0, 0),
 (13, 3, "NEUTRO", "abegabe", 10, 400, 100, 0, 30, 0, 20),
 (14, 3, "NEUTRO", "b13top", 15, 800, 170, 15, 20, 15, 25),
 (15, 3, "NEUTRO", "fr0z3n", 17, 900, 185, 20, 35, 10, 20),
@@ -536,6 +535,11 @@ INSERT INTO Guilda (idguilda, guilda_superior, jogador_chefe, nome, nivel) VALUE
 (2, null, 8, "black", 5),
 (3, 1, 16,"HARPA", 2);
 
+INSERT INTO guilda_regra (idregra, idguilda, regra) VALUES
+(1, 1, "Proibido PVP entre menbros da guilda"),
+(2, 1, "Proibido invadir territórios de outras guildas"),
+(3, 2, "Todos os jogadores devem doar 1% do seu xp a guilda"),
+(3, 3, "Todos os jogadores devem estar presentes no discord da guilda quando em pvp");
 
 INSERT INTO Habita (idterritorio, idguilda, beneficio_menbros) VALUES
 (1, 3, "5% de xp por missão completada na área"),

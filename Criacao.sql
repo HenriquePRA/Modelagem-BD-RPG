@@ -43,15 +43,16 @@ CREATE TABLE Profissao (
 CREATE TABLE Jogador (
     idjogador       BIGINT PRIMARY KEY,
     idguilda        INT REFERENCES Guilda(idguilda),
-    alinhamento     VARCHAR(45),
-    nome            VARCHAR(45) NOT NULL,
+    alinhamento     VARCHAR(45) DEFAULT 'NEUTRO',
+    nome            VARCHAR(45) NOT NULL UNIQUE,
     nivel           SMALLINT    NOT NULL,
     experiencia     BIGINT      NOT NULL,
     vitalidade      INT         NOT NULL,
     forca           INT         NOT NULL,
     destreza        INT         NOT NULL,
     resiliencia     INT         NOT NULL,
-    inteligencia    INT         NOT NULL
+    inteligencia    INT         NOT NULL,
+    CHECK (nivel >= 0 AND nivel <= 100)
 );
 
 CREATE TABLE jogador_missao (
@@ -123,7 +124,8 @@ CREATE TABLE Guilda (
     guilda_superior INT REFERENCES Guilda(idguilda),
     jogador_chefe   BIGINT      NOT NULL REFERENCES Jogador(idjogador),
     nome            VARCHAR(45) NOT NULL,
-    nivel           INT         NOT NULL
+    nivel           INT         NOT NULL,
+    CHECK (nivel >= 0 AND nivel <= 100)
 );
 
 CREATE TABLE guilda_regra (
