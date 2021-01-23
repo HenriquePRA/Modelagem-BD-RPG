@@ -439,65 +439,97 @@ INSERT INTO conquista_missao (missao, conquista) VALUES
 (32, 4);
 
 INSERT INTO INVENTARIO (idinventario, idjogador, slots, ouro) VALUES
-(1, 1, 200, 15157), 
+(1, 1, 200, 155157), 
 (2, 2, 200, 0),
-(3, 3, 300, 120),
-(4, 4, 200, 0),
-(5, 5, 250, 0),
-(6, 6, 200, 25245),
-(7, 7, 300, 5752),
-(8, 8, 250, 6563),
-(9, 9, 200, 450),
-(10, 10, 200, 0),
-(11, 11, 300, 0),
+(3, 3, 200, 0),
+(4, 4, 300, 1200),
+(5, 5, 200, 0),
+(6, 6, 250, 0),
+(7, 7, 250, 0),
+(8, 8, 200, 252450),
+(9, 9, 300, 57520),
+(10, 10, 250, 65630),
+(11, 11, 200, 4500),
 (12, 12, 200, 0),
-(13, 13, 250, 0),
-(14, 14, 200, 10000),
-(15, 15, 300, 15778),
-(16, 6, 250, 0),
-(17, 15, 200, 0),
-(18, 14, 250, 7561);
+(13, 13, 300, 0),
+(14, 14, 200, 0),
+(15, 15, 250, 0),
+(16, 16, 200, 100000),
+(17, 17, 300, 157780),
+(18, 8, 250, 0),
+(19, 17, 200, 0),
+(20, 16, 250, 75610);
 
 INSERT INTO inventario_recurso (idinventario, idjogador, idrecurso) VALUES
-(1, 1, 7),
-(1, 1, 13),
-(6, 6, 7),
-(16, 6, 8),
-(6, 6, 13),
-(7, 7, 14),
-(7, 7, 3),
-(8, 8, 3),
-(8, 8, 4),
-(8, 8, 5),
-(14, 14, 1);
+(1, 1, 19),
+(1, 1, 31),
+(1, 1, 42),
+(1, 1, 43),
+(1, 1, 44),
+(4, 4, 1),
+(4, 4, 5),
+(4, 4, 16),
+(8, 8, 8),
+(8, 8, 39),
+(8, 8, 40),
+(8, 8, 41),
+(9, 9, 21),
+(9, 9, 24),
+(9, 9, 27),
+(10, 10, 3),
+(10, 10, 8),
+(10, 10, 12),
+(10, 10, 33),
+(11, 11, 11),
+(16, 16, 17),
+(16, 16, 19),
+(16, 16, 35),
+(17, 17, 8),
+(17, 17, 9),
+(18, 8, 2),
+(18, 8, 4),
+(18, 8, 5),
+(19, 17, 20),
+(19, 17, 26),
+(19, 17, 29),
+(20, 16, 36),
+(20, 16, 37),
+(20, 16, 38),
+(20, 16, 13);
 
-INSERT INTO Humano (idjogador, idprofissao) VALUES
-(1, 1),
-(1, 2),
-(6, 1),
-(6, 2),
-(6, 3),
-(6, 4),
-(7, 1),
-(8, 2),
-(14, 4),
-(14, 2);
+INSERT INTO Ogro (idjogador, habilidade_O, resiliencia) VALUES
+(12, "Regeneracao", "ATK-Fisico"),
+(13, "Regeneracao", "ATK-Magico"),
+(14, "Bersek", "ATK-Fisico"),
+(15, "Regeneracao", "ATK-Fisico"),
+(17, "Rage", "Veneno");
 
-INSERT INTO Elfo (idjogador, habilidade) VALUES
+INSERT INTO Elfo (idjogador, habilidade_E) VALUES
 (2, "Invisibilidade"),
 (3, "Percepcao"),
 (4, "rolbak"),
 (5, "Invisibilidade"),
+(6, "Invisibilidade"),
 (9, "Percepcao");
 
-INSERT INTO Ork (idjogador, passiva, resistencia) VALUES
-(10, "Regeneracao", "ATK-Fisico"),
-(11, "Regeneracao", "ATK-Magico"),
-(12, "Bersek", "ATK-Fisico"),
-(13, "Regeneracao", "ATK-Fisico"),
-(15, "Rage", "Veneno");
+INSERT INTO Humano (idjogador, habilidade_H) VALUES
+(1, "Foco"),
+(7, "Evasão"),
+(8, "Foco"),
+(10, "Evasão"),
+(11, "Analise");
 
-
+INSERT INTO humano_profissao (profissao, humano) VALUES
+(3, 1),
+(5, 1),
+(2, 7),
+(8, 1),
+(8, 2),
+(8, 3),
+(8, 4),
+(8, 5),
+(10, 4),
+(11, 1);
 
 INSERT INTO Guilda (idguilda, guilda_superior, jogador_chefe, nome, nivel) VALUES
 (1, null, 1, "KAMA", 10),
@@ -505,9 +537,20 @@ INSERT INTO Guilda (idguilda, guilda_superior, jogador_chefe, nome, nivel) VALUE
 (3, 1, 16,"HARPA", 2);
 
 
-INSERT INTO Habita (idterritorio, idalinhamento, idguilda, beneficio_menbros) VALUES
-(1, 1, 1, "25% de xp por missão completada na área"),
-(2, 1, 1, "100 de ouro adicional por missão completada na área"),
-(3, 3, 2, "15% de xp por missão completada na área"),
-(4, 3, 2, "10% de xp por missão completada na área"),
-(5, 2, 3, "300 de ouro adicional por missão completada na área");
+INSERT INTO Habita (idterritorio, idguilda, beneficio_menbros) VALUES
+(1, 3, "5% de xp por missão completada na área"),
+(2, 3, "7% de xp por missão completada na área"),
+(3, 3, "6% de xp por missão completada na área"),
+(4, 2, "100 de ouro adicional por missão completada na área"),
+(5, 2, "150 de ouro adicional por missão completada na área"),
+(6, 2, "100 de ouro adicional por missão completada na área"),
+(7, 2, "75 de ouro adicional por missão completada na área"),
+(8, 2, "200 de ouro adicional por missão completada na área"),
+(9, 1, "15% de xp por missão completada na área"),
+(10, 1, "10% de xp por missão completada na área"),
+(11, 1, "6% de xp por missão completada na área"),
+(12, 1, "8% de xp por missão completada na área"),
+(13, 1, "7% de xp por missão completada na área"),
+(14, 1, "12% de xp por missão completada na área"),
+(15, 1, "15% de xp por missão completada na área"),
+(16, 1, "5% de xp por missão completada na área");
