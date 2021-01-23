@@ -56,11 +56,13 @@ pelos modelos conceitual, lógico até chegar ao físico.
   
 <a name="ModeloFisico"></a>
 * ### Modelo Físico
-  :construction: Em construção :construction:
+  <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/fisico.JPG">
   
 <a name="Ferramentas"></a>
 * ### Ferramentas Utilizadas
-  :construction: Em construção :construction:
+  * BrModelo (Conceitual)
+  * MySql Workbench (Lógico)
+  * MySql (Físico)
 
 <a name="Requisitos"></a>
 ## Requisitos :clipboard:
@@ -161,12 +163,10 @@ especialmente quanto ao script SQL em seu modelo físico, sendo eles:
       <li>MAX</li>
       <li>MIN</li>
       <li>GROUP BY</li>
-      <li>ORDER BY</li>
       <li>HAVING</li>
       <li>INNER JOIN</li>
       <li>LEFT JOIN</li>
       <li>RIGHT JOIN</li>
-      <li>FULL JOIN</li>
       <li>SUBCONSULTA</li>      
     </ul>
   </li>
@@ -175,21 +175,20 @@ especialmente quanto ao script SQL em seu modelo físico, sendo eles:
 
 <a name="Status"></a>
 ## Status do Projeto :construction_worker:
-  :construction: Em Andamento :construction:
+  Finalizado :tada:
   
 <a name="instalação"></a>
 ## Instalação e Testes :computer:
 
 <b>Modelo Conceitual:</b> Para ver ou modificar o modelo conceitual deve ser utilizado a ferramenta brModelo,
-o arquivo com o modelo Conceitual é disponibilizado no diretório Modelagem/Conceitual.brM3
+o arquivo com o modelo Conceitual é o Conceitual.brM3
 
 <b>Esquema Lógico:</b> Para ver ou modificar o esquema lógico deve ser utilizado a ferramenta MySQL Workbench,
-o arquivo com o esquema lógico é encontrado no diretório Modelagem/Logico.mwb
+o arquivo com o esquema lógico é o Logico.mwb
 
-<b>Dicionário de Dados:</b> Apesar de ter utilizado o LibreOffice para escrever o dicionário de dados para ver 
-ou modificar o mesmo qualquer editor com suporte a documentos .docx pode ser utilizado, o arquivo com o dicionário
-é encontrado no diretório Modelagem/Dicionario.docx
+<b>Dicionário de Dados:</b> Apesar de ter utilizado o LibreOffice para escrevelo para ver ou modificar o mesmo
+qualquer editor com suporte a documentos .docx pode ser utilizado, o arquivo com o dicionário é o Dicionário de Dados.docx
       
 <b>Modelo Físico:</b> A maioria dos banco de dados com suporte a SQL deve ser capaz de executar esses scripts sem
-problema como por exemplo o MySQL ou PostgreSQL. todavia enfatizo que esses scripts foram testados apenas no Microsoft SQL Server.
+problema como por exemplo o MySQL ou PostgreSQL. todavia enfatizo que esses scripts foram testados apenas no MySQL.
 
