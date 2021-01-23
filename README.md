@@ -55,7 +55,7 @@ pelos modelos conceitual, lógico até chegar ao físico.
   <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/dicionario.JPG">
   
 <a name="ModeloFisico"></a>
-* ### Modelo Físico
+* ### Modelo Físico (Fragmento)
   <img src="https://raw.githubusercontent.com/HenriquePRA/Modelagem-BD-RPG/screenshots/screenshots/fisico.JPG">
   
 <a name="Ferramentas"></a>
@@ -189,6 +189,15 @@ o arquivo com o esquema lógico é o Logico.mwb
 <b>Dicionário de Dados:</b> Apesar de ter utilizado o LibreOffice para escrevelo para ver ou modificar o mesmo
 qualquer editor com suporte a documentos .docx pode ser utilizado, o arquivo com o dicionário é o Dicionário de Dados.docx
       
-<b>Modelo Físico:</b> A maioria dos banco de dados com suporte a SQL deve ser capaz de executar esses scripts sem
+<b>Modelo Físico:</b> A maioria dos banco de dados com suporte a SQL deve ser capaz de executar os scripts sem
 problema como por exemplo o MySQL ou PostgreSQL. todavia enfatizo que esses scripts foram testados apenas no MySQL.
+
+Os scripts devem ser executados na ordem:
+1. Criacao.sql
+2. Povoamento.sql
+
+E as consultas em Consultas.sql devem ser feitas uma por uma.
+
+
+
 
